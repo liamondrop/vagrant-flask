@@ -1,3 +1,4 @@
 .DS_STORE
 .sudo_as_admin_successful
+.vagrant
 Vagrantfile.additional_providers
