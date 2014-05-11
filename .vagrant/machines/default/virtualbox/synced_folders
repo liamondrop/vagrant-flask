@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/flask":{"owner":"vagrant","group":"www-data","mount_options":["dmode=775","fmode=775"],"guestpath":"/var/www/flask","hostpath":"/Users/liam/Sites/flask-tut"},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/liam/Sites/flask-tut"}}}

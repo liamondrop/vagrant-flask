@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+"""
+This file can be used for provider-specific overrides. An
+example is provisioning a Digital Ocean droplet. See
+https://github.com/smdahlen/vagrant-digitalocean for full details
+
+Save this file as `Vagrantfile.additional_providers`, which will
+be ignored by Git.
+"""
+Vagrant.configure('2') do |config|
+
+  config.vm.provider :digital_ocean do |provider, override|
+    override.ssh.private_key_path = '~/.ssh/id_rsa'
+    override.vm.box = 'digital_ocean'
+    override.vm.box_url = "https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
+
+    provider.client_id = 'YOUR CLIENT ID'
+    provider.api_key = 'YOUR API KEY'
+    provider.image = "Ubuntu 12.04.4 x64"
+    provider.size = "2GB"
+    override.vm.provision :shell, path: "bootstrap.sh", args: "digital_ocean"
+  end
+end
