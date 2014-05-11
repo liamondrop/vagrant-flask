@@ -1,7 +1,7 @@
 Vagrant Flask
 ========================
 
-Automatically provision an instance of Flask
+Automatically provision a virtualbox and build Flask
 
 ## Usage
 
